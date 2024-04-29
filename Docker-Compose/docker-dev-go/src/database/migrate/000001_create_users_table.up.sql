@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS `users` (
+  `user_id`     int(11) NOT NULL AUTO_INCREMENT,
+  `name`        VARCHAR(191) NULL,
+  `org_id`      int(11) NULL,
+  `creater`     VARCHAR(191) NULL,
+  `created_at`  DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updater`     VARCHAR(191) NULL,
+  `updated_at`  DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`user_id`)
+);
