@@ -9,13 +9,13 @@ import (
 // ユーザー情報の構造体
 // usersテーブルのカラム名でjson出力するため、各項目に「`json:""`」を設定します。
 type User struct {
-	user_id    int       `json:"user_id"`
-	name       string    `json:"name"`
-	org_id     int       `json:"org_id"`
-	creater    string    `json:"creater"`
-	created_at time.Time `json:"created_at"`
-	updater    string    `json:"updater"`
-	updated_at time.Time `json:"updated_at"`
+	UserId    int       `json:"user_id"`
+	Name      string    `json:"name"`
+	OrgId     int       `json:"org_id"`
+	Creater   string    `json:"creater"`
+	CreatedAt time.Time `json:"created_at"`
+	Updater   string    `json:"updater"`
+	UpdatedAt time.Time `json:"updated_at"`
 }
 
 // DBからusersテーブルの全レコードを取得
