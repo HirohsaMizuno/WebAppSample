@@ -1,0 +1,4 @@
+Docker-Compose/docker-dev-go/src/post_cmd.txt
+Docker-Compose/docker-dev-go/src/pre_cmd.txt
+*.mod
+*.sum

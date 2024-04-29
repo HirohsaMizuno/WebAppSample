@@ -1,18 +1,19 @@
 package main
 
 import (
-  "github.com/gin-gonic/gin"
+	"docker-dev-go/config"
+	"docker-dev-go/database"
+	"docker-dev-go/router"
 )
 
 func main() {
-  router := gin.Default()
+	// configの初期化
+	config.Init()
 
-  // JSON形式で「"message": "Hello World"」を出力するAPI
-  router.GET("/", func(c *gin.Context) {
-    c.JSON(200, gin.H{
-      "message": "Hello World",
-    })
-  })
+	// DBの初期化
+	database.Init()
+	defer database.Close()
 
-  router.Run(":3001")
+	// routerの初期化
+	router.Init()
 }
